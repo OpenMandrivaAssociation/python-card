@@ -10,6 +10,7 @@ Patch1: PythonCardSamples.patch
 Patch2: PythonCardConfig.patch
 URL: http://pythoncard.sourceforge.net/
 Group: Development/Python
+BuildRoot: %{_tmppath}/%{name}-buildroot
 License: Python license
 Requires: python-base >= %{pyver}, wxPython >= 2.5.2
 BuildArch: noarch
