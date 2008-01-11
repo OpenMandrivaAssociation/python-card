@@ -159,12 +159,6 @@ rm -f %{buildroot}/usr/bin/install-pythoncard.py
 rm -f %{buildroot}%py_puresitedir/PythonCard/build/scripts-2.4/install-pythoncard.py
 
 # menu support
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cat > $RPM_BUILD_ROOT%{_menudir}/%{name} << EOF
-?package(%{name}): needs="X11" section="More Applications/Development/Development Environments" title="PythonCard Resource Editor" longtitle="This represents the beginnings of a GUI resource (layout) editor for PythonCard" command="%{_datadir}/PythonCard/tools/resourceEditor/resourceEditor.py" icon="development_environment_section.png" xdg="true"
-?package(%{name}): needs="X11" section="More Applications/Development/Tools" title="PythonCard Code Editor" longtitle="The codeEditor sample in PythonCard is focused on being a simple to use Python source code editor" command="%{_datadir}/PythonCard/tools/codeEditor/codeEditor.py" icon="editors_section.png" xdg="true"
-?package(%{name}): needs="X11" section="More Applications/Development/Tools" title="PythonCard Samples" longtitle="The main purpose of the samples is to \"stress\" the PythonCard framework and make sure that the framework is robust and full-featured" command="%{_datadir}/PythonCard/samples/samples.py" icon="toys_section.png" xdg="true"
-EOF
 
 # XDG menus
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
@@ -211,7 +205,6 @@ EOXDG3
 %{_datadir}/PythonCard/samples/*
 %{_datadir}/PythonCard/tools/*
 %{_datadir}/applications/mandriva-%{name}*.desktop
-%{_menudir}/*
 
 %post
 %{update_menus}
