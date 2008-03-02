@@ -4,7 +4,7 @@
 Name: %{name}
 Summary: PythonCard GUI construction toolkit
 Version: %{version}
-Release: %mkrel 3
+Release: %mkrel 4
 Source0: http://prdownloads.sourceforge.net/pythoncard/PythonCard-%{version}.tar.bz2
 Patch1: PythonCardSamples.patch
 Patch2: PythonCardConfig.patch
@@ -202,6 +202,7 @@ EOXDG3
 %defattr(-,root,root,0755)
 %doc docs/* README.txt README_StyleEditor.txt PKG-INFO
 %py_puresitedir/PythonCard/*
+%py_puresitedir/*.egg-info
 %{_datadir}/PythonCard/samples/*
 %{_datadir}/PythonCard/tools/*
 %{_datadir}/applications/mandriva-%{name}*.desktop
