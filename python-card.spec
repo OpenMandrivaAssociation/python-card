@@ -14,6 +14,7 @@ BuildRoot: %{_tmppath}/%{name}-buildroot
 License: Python license
 Requires: python-base >= %{pyver}, wxPython >= 2.5.2
 BuildArch: noarch
+BuildRequires: python-devel 
 
 %description
 PythonCard is a GUI construction kit for building cross-platform desktop
