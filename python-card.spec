@@ -208,9 +208,13 @@ EOXDG3
 %{_datadir}/PythonCard/tools/*
 %{_datadir}/applications/mandriva-%{name}*.desktop
 
+%if %mdkversion < 200900
 %post
 %{update_menus}
+%endif
 
+%if %mdkversion < 200900
 %postun
 %{clean_menus}
+%endif
 
