@@ -4,7 +4,7 @@
 Name: %{name}
 Summary: PythonCard GUI construction toolkit
 Version: %{version}
-Release: %mkrel 6
+Release: %mkrel 7
 Source0: http://prdownloads.sourceforge.net/pythoncard/PythonCard-%{version}.tar.bz2
 Patch1: PythonCardSamples.patch
 Patch2: PythonCardConfig.patch
