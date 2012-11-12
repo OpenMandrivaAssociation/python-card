@@ -1,0 +1,14 @@
+--- PythonCard-0.8.1/configuration.py.org       2005-01-21 13:51:55.526069632 +0000
++++ PythonCard-0.8.1/configuration.py   2005-01-21 13:51:57.722735688 +0000
+@@ -29,7 +29,10 @@
+ # KEA 2003-06-04
+ # the config dir was named .pythoncard in release 0.7
+ # but this caused problems on Windows and the Mac OS X Finder
+-PYTHONCARD_CONFIG_DIR = "pythoncard_config"
++if sys.platform.startswith('linux'):
++    PYTHONCARD_CONFIG_DIR = ".pythoncard"
++else:
++    PYTHONCARD_CONFIG_DIR = "pythoncard_config"
+
+ PYTHONCARD_CONFIG_FILE = 'pythoncard_config.txt'
+
