@@ -1,18 +1,14 @@
-%define name python-card
-%define version 0.8.1
-
-Name: %{name}
+Name: python-card
 Summary: PythonCard GUI construction toolkit
-Version: %{version}
-Release: %mkrel 9
+Version: 0.8.1
+Release: 10
 Source0: http://prdownloads.sourceforge.net/pythoncard/PythonCard-%{version}.tar.bz2
 Patch1: PythonCardSamples.patch
 Patch2: PythonCardConfig.patch
 URL: http://pythoncard.sourceforge.net/
 Group: Development/Python
-BuildRoot: %{_tmppath}/%{name}-buildroot
 License: Python license
-Requires: python-base >= %{pyver}, wxPython >= 2.5.2
+Requires: python-base >= %{py_ver}, wxPython >= 2.5.2
 BuildArch: noarch
 BuildRequires: python-devel 
 
@@ -20,7 +16,7 @@ BuildRequires: python-devel
 PythonCard is a GUI construction kit for building cross-platform desktop
 applications on Windows, Mac OS X, and Linux, using the Python language.
 
-%prep [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+%prep
 %setup -n PythonCard-%{version} -q
 %patch1 -p1
 %patch2 -p1
@@ -29,7 +25,7 @@ applications on Windows, Mac OS X, and Linux, using the Python language.
 python setup.py build
 
 %install
-python setup.py install --root=$RPM_BUILD_ROOT
+python setup.py install --root=%{buildroot}
 chmod 0755 %{buildroot}%py_puresitedir/PythonCard/flatfileDatabase.py
 chmod 0755 %{buildroot}%py_puresitedir/PythonCard/gadflyDatabase.py
 chmod 0755 %{buildroot}%py_puresitedir/PythonCard/templates/htmlpreview.py
@@ -162,8 +158,8 @@ rm -f %{buildroot}%py_puresitedir/PythonCard/build/scripts-2.4/install-pythoncar
 # menu support
 
 # XDG menus
-mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
-cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}-resourceEditor.desktop << EOXDG1
+mkdir -p %{buildroot}%{_datadir}/applications
+cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}-resourceEditor.desktop << EOXDG1
 [Desktop Entry]
 Name=PythonCard Resource Editor
 Comment=This represents the beginnings of a GUI resource (layout) editor for PythonCard
@@ -174,7 +170,7 @@ Type=Application
 Categories=X-MandrivaLinux-MoreApplications-Development-DevelopmentEnvironments;Development;GUIDesigner;
 EOXDG1
 
-cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}-codeEditor.desktop << EOXDG2
+cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}-codeEditor.desktop << EOXDG2
 [Desktop Entry]
 Name=PythonCard Code Editor
 Comment=The codeEditor sample in PythonCard is focused on being a simple to use Python source code editor
@@ -185,7 +181,7 @@ Type=Application
 Categories=X-MandrivaLinux-MoreApplications-Development-Tools;Development;
 EOXDG2
 
-cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}-samples.desktop << EOXDG3
+cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}-samples.desktop << EOXDG3
 [Desktop Entry]
 Name=PythonCard Samples
 Comment=The main purpose of the samples is to "stress" the PythonCard framework and make sure that the framework is robust and full-featured
@@ -196,9 +192,6 @@ Type=Application
 Categories=X-MandrivaLinux-MoreApplications-Development-Tools;Development;
 EOXDG3
 
-%clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
-
 %files
 %defattr(-,root,root,0755)
 %doc docs/* README.txt README_StyleEditor.txt PKG-INFO
@@ -208,13 +201,49 @@ EOXDG3
 %{_datadir}/PythonCard/tools/*
 %{_datadir}/applications/mandriva-%{name}*.desktop
 
-%if %mdkversion < 200900
-%post
-%{update_menus}
-%endif
 
-%if %mdkversion < 200900
-%postun
-%{clean_menus}
-%endif
+%changelog
+* Tue Sep 15 2009 Thierry Vignaud <tv@mandriva.org> 0.8.1-9mdv2010.0
++ Revision: 442052
+- rebuild
+
+* Sat Jan 03 2009 Funda Wang <fwang@mandriva.org> 0.8.1-8mdv2009.1
++ Revision: 323558
+- rebuild
+
+* Fri Aug 01 2008 Thierry Vignaud <tv@mandriva.org> 0.8.1-7mdv2009.0
++ Revision: 259517
+- rebuild
+
+* Thu Jul 24 2008 Thierry Vignaud <tv@mandriva.org> 0.8.1-6mdv2009.0
++ Revision: 247388
+- rebuild
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+* Sun Mar 02 2008 Michael Scherer <misc@mandriva.org> 0.8.1-4mdv2008.1
++ Revision: 177654
+- add missing BuildRequires
+- rebuild for python 2.5
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - drop old menu
+    - kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+
+* Tue Sep 05 2006 Stéphane Téletchéa <steletch@mandriva.org> 0.8.1-3mdv2007.0
+- Migration to XDG menu
+- use datadir macros in the debian menu entries, add longtitle description
+- fix some permissions (some rpmlint errors left)
+
+* Wed Jan 11 2006 Michael Scherer <misc@mandriva.org> 0.8.1-2mdk
+- Use new python macro
+- do not use release and %%mkrel as this is not rpmbuildupdate proof
+
+* Tue Jun 07 2005 Frederic Lepied <flepied@mandriva.com> 0.8.1-1mdk
+- initial build (based on Phil Edwards' work)
 
