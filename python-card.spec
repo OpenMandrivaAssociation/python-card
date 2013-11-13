@@ -1,8 +1,8 @@
 Name: python-card
 Summary: PythonCard GUI construction toolkit
-Version: 0.8.1
-Release: 10
-Source0: http://prdownloads.sourceforge.net/pythoncard/PythonCard-%{version}.tar.bz2
+Version: 0.8.2
+Release: 1
+Source0: https://sourceforge.net/projects/pythoncard/files/PythonCard/0.8.2/PythonCard-%{version}.tar.gz
 Patch1: PythonCardSamples.patch
 Patch2: PythonCardConfig.patch
 URL: http://pythoncard.sourceforge.net/
@@ -246,4 +246,5 @@ EOXDG3
 
 * Tue Jun 07 2005 Frederic Lepied <flepied@mandriva.com> 0.8.1-1mdk
 - initial build (based on Phil Edwards' work)
+
 
