@@ -1,108 +1,108 @@
-diff -u -r PythonCard-0.8.1/samples/textIndexer/textIndexer.py PythonCard-0.8.1.new/samples/textIndexer/textIndexer.py
---- PythonCard-0.8.1/samples/textIndexer/textIndexer.py	2004-08-12 20:19:02.000000000 +0100
-+++ PythonCard-0.8.1.new/samples/textIndexer/textIndexer.py	2005-01-21 14:01:44.334557136 +0000
+diff -Naur PythonCard-0.8.2.orig/samples/textIndexer/textIndexer.py PythonCard-0.8.2/samples/textIndexer/textIndexer.py
+--- PythonCard-0.8.2.orig/samples/textIndexer/textIndexer.py	2013-11-14 10:13:25.570170409 +0400
++++ PythonCard-0.8.2/samples/textIndexer/textIndexer.py	2013-11-14 10:13:43.302171510 +0400
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/python
  """
- __version__ = "$Revision: 1.27 $"
- __date__ = "$Date: 2004/08/12 19:19:02 $"
-diff -u -r PythonCard-0.8.1/samples/textRouter/textRouter.py PythonCard-0.8.1.new/samples/textRouter/textRouter.py
---- PythonCard-0.8.1/samples/textRouter/textRouter.py	2004-08-17 20:11:51.000000000 +0100
-+++ PythonCard-0.8.1.new/samples/textRouter/textRouter.py	2005-01-21 14:01:44.382549840 +0000
+ __version__ = "$Revision: 1.28 $"
+ __date__ = "$Date: 2005/09/18 03:59:22 $"
+diff -Naur PythonCard-0.8.2.orig/samples/textRouter/textRouter.py PythonCard-0.8.2/samples/textRouter/textRouter.py
+--- PythonCard-0.8.2.orig/samples/textRouter/textRouter.py	2013-11-14 10:13:25.579170410 +0400
++++ PythonCard-0.8.2/samples/textRouter/textRouter.py	2013-11-14 10:13:43.303171511 +0400
 @@ -1,4 +1,4 @@
 -#!/usr/local/bin/python
 +#!/usr/bin/python
  
  """
- __version__ = "$Revision: 1.84 $"
-diff -u -r PythonCard-0.8.1/samples/textRouter/wordwrap.py PythonCard-0.8.1.new/samples/textRouter/wordwrap.py
---- PythonCard-0.8.1/samples/textRouter/wordwrap.py	2002-12-27 17:26:40.000000000 +0000
-+++ PythonCard-0.8.1.new/samples/textRouter/wordwrap.py	2005-01-21 14:01:44.427543000 +0000
+ __version__ = "$Revision: 1.85 $"
+diff -Naur PythonCard-0.8.2.orig/samples/textRouter/wordwrap.py PythonCard-0.8.2/samples/textRouter/wordwrap.py
+--- PythonCard-0.8.2.orig/samples/textRouter/wordwrap.py	2013-11-14 10:13:25.579170410 +0400
++++ PythonCard-0.8.2/samples/textRouter/wordwrap.py	2013-11-14 10:13:43.303171511 +0400
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/python
  #
  # word_wrap.py
  #
-diff -u -r PythonCard-0.8.1/samples/webgrabber/webchecker.py PythonCard-0.8.1.new/samples/webgrabber/webchecker.py
---- PythonCard-0.8.1/samples/webgrabber/webchecker.py	2002-06-06 17:32:39.000000000 +0100
-+++ PythonCard-0.8.1.new/samples/webgrabber/webchecker.py	2005-01-21 14:01:44.473536008 +0000
+diff -Naur PythonCard-0.8.2.orig/samples/webgrabber/webchecker.py PythonCard-0.8.2/samples/webgrabber/webchecker.py
+--- PythonCard-0.8.2.orig/samples/webgrabber/webchecker.py	2013-11-14 10:13:25.575170409 +0400
++++ PythonCard-0.8.2/samples/webgrabber/webchecker.py	2013-11-14 10:13:43.303171511 +0400
 @@ -1,4 +1,4 @@
 -#! /usr/bin/env python
 +#!/usr/bin/python
  
  # Original code by Guido van Rossum; extensive changes by Sam Bayer,
  # including code to check URL fragments.
-diff -u -r PythonCard-0.8.1/samples/webgrabber/websucker.py PythonCard-0.8.1.new/samples/webgrabber/websucker.py
---- PythonCard-0.8.1/samples/webgrabber/websucker.py	2002-06-06 17:32:39.000000000 +0100
-+++ PythonCard-0.8.1.new/samples/webgrabber/websucker.py	2005-01-21 14:01:44.518529168 +0000
+diff -Naur PythonCard-0.8.2.orig/samples/webgrabber/websucker.py PythonCard-0.8.2/samples/webgrabber/websucker.py
+--- PythonCard-0.8.2.orig/samples/webgrabber/websucker.py	2013-11-14 10:13:25.575170409 +0400
++++ PythonCard-0.8.2/samples/webgrabber/websucker.py	2013-11-14 10:13:43.303171511 +0400
 @@ -1,4 +1,4 @@
 -#! /usr/bin/env python
 +#!/usr/bin/python
  
  """A variant on webchecker that creates a mirror copy of a remote site."""
  
-diff -u -r PythonCard-0.8.1/setup.py PythonCard-0.8.1.new/setup.py
---- PythonCard-0.8.1/setup.py	2004-10-19 16:53:53.000000000 +0100
-+++ PythonCard-0.8.1.new/setup.py	2005-01-21 14:01:44.563522328 +0000
+diff -Naur PythonCard-0.8.2.orig/setup.py PythonCard-0.8.2/setup.py
+--- PythonCard-0.8.2.orig/setup.py	2013-11-14 10:13:25.557170408 +0400
++++ PythonCard-0.8.2/setup.py	2013-11-14 10:13:43.304171511 +0400
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/python
  # $Id: setup.py,v 1.22 2004/10/03 18:53:22 kasplat Exp $
  # By R.Suzi rnd@onego.ru
  # Extended and expanded by Andy Todd <andy47@halfcooked.com>
-diff -u -r PythonCard-0.8.1/tools/codeEditor/codeEditor.py PythonCard-0.8.1.new/tools/codeEditor/codeEditor.py
---- PythonCard-0.8.1/tools/codeEditor/codeEditor.py	2004-08-18 17:24:56.000000000 +0100
-+++ PythonCard-0.8.1.new/tools/codeEditor/codeEditor.py	2005-01-21 14:01:44.611515032 +0000
+diff -Naur PythonCard-0.8.2.orig/tools/codeEditor/codeEditor.py PythonCard-0.8.2/tools/codeEditor/codeEditor.py
+--- PythonCard-0.8.2.orig/tools/codeEditor/codeEditor.py	2013-11-14 10:13:25.561170408 +0400
++++ PythonCard-0.8.2/tools/codeEditor/codeEditor.py	2013-11-14 10:13:43.304171511 +0400
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/python
  """
- __version__ = "$Revision: 1.125 $"
- __date__ = "$Date: 2004/08/18 16:24:56 $"
-diff -u -r PythonCard-0.8.1/tools/codeEditor/codeEditorR.py PythonCard-0.8.1.new/tools/codeEditor/codeEditorR.py
---- PythonCard-0.8.1/tools/codeEditor/codeEditorR.py	2004-09-16 22:11:33.000000000 +0100
-+++ PythonCard-0.8.1.new/tools/codeEditor/codeEditorR.py	2005-01-21 14:01:44.663507128 +0000
+ __version__ = "$Revision: 1.126 $"
+ __date__ = "$Date: 2005/12/19 23:18:04 $"
+diff -Naur PythonCard-0.8.2.orig/tools/codeEditor/codeEditorR.py PythonCard-0.8.2/tools/codeEditor/codeEditorR.py
+--- PythonCard-0.8.2.orig/tools/codeEditor/codeEditorR.py	2013-11-14 10:13:25.561170408 +0400
++++ PythonCard-0.8.2/tools/codeEditor/codeEditorR.py	2013-11-14 10:13:43.304171511 +0400
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/python
  """
  __version__ = "$Revision: 1.14 $"
  __date__ = "$Date: 2004/09/16 21:11:33 $"
-diff -u -r PythonCard-0.8.1/tools/codeEditor/restEditor.py PythonCard-0.8.1.new/tools/codeEditor/restEditor.py
---- PythonCard-0.8.1/tools/codeEditor/restEditor.py	2004-08-27 03:03:25.000000000 +0100
-+++ PythonCard-0.8.1.new/tools/codeEditor/restEditor.py	2005-01-21 14:01:44.717498920 +0000
+diff -Naur PythonCard-0.8.2.orig/tools/codeEditor/restEditor.py PythonCard-0.8.2/tools/codeEditor/restEditor.py
+--- PythonCard-0.8.2.orig/tools/codeEditor/restEditor.py	2013-11-14 10:13:25.561170408 +0400
++++ PythonCard-0.8.2/tools/codeEditor/restEditor.py	2013-11-14 10:13:43.304171511 +0400
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/python
  """
  __version__ = "$Revision: 1.7 $"
  __date__ = "$Date: 2004/08/27 02:03:25 $"
-diff -u -r PythonCard-0.8.1/tools/oneEditor/codePage.py PythonCard-0.8.1.new/tools/oneEditor/codePage.py
---- PythonCard-0.8.1/tools/oneEditor/codePage.py	2004-10-11 00:38:29.000000000 +0100
-+++ PythonCard-0.8.1.new/tools/oneEditor/codePage.py	2005-01-21 14:01:44.773490408 +0000
+diff -Naur PythonCard-0.8.2.orig/tools/oneEditor/codePage.py PythonCard-0.8.2/tools/oneEditor/codePage.py
+--- PythonCard-0.8.2.orig/tools/oneEditor/codePage.py	2013-11-14 10:13:25.559170408 +0400
++++ PythonCard-0.8.2/tools/oneEditor/codePage.py	2013-11-14 10:13:43.304171511 +0400
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/python
  """
- __version__ = "$Revision: 1.4 $"
- __date__ = "$Date: 2004/10/10 23:38:29 $"
-diff -u -r PythonCard-0.8.1/tools/oneEditor/restEditor.py PythonCard-0.8.1.new/tools/oneEditor/restEditor.py
---- PythonCard-0.8.1/tools/oneEditor/restEditor.py	2004-10-04 00:58:01.000000000 +0100
-+++ PythonCard-0.8.1.new/tools/oneEditor/restEditor.py	2005-01-21 14:01:44.833481288 +0000
+ __version__ = "$Revision: 1.5 $"
+ __date__ = "$Date: 2005/12/29 02:48:25 $"
+diff -Naur PythonCard-0.8.2.orig/tools/oneEditor/restEditor.py PythonCard-0.8.2/tools/oneEditor/restEditor.py
+--- PythonCard-0.8.2.orig/tools/oneEditor/restEditor.py	2013-11-14 10:13:25.557170408 +0400
++++ PythonCard-0.8.2/tools/oneEditor/restEditor.py	2013-11-14 10:13:43.305171511 +0400
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/python
  """
  __version__ = "$Revision: 1.1 $"
  __date__ = "$Date: 2004/10/03 23:58:01 $"
-diff -u -r PythonCard-0.8.1/tools/oneEditor/tabcodeEditor.py PythonCard-0.8.1.new/tools/oneEditor/tabcodeEditor.py
---- PythonCard-0.8.1/tools/oneEditor/tabcodeEditor.py	2004-10-17 17:39:13.000000000 +0100
-+++ PythonCard-0.8.1.new/tools/oneEditor/tabcodeEditor.py	2005-01-21 14:01:44.896471712 +0000
+diff -Naur PythonCard-0.8.2.orig/tools/oneEditor/tabcodeEditor.py PythonCard-0.8.2/tools/oneEditor/tabcodeEditor.py
+--- PythonCard-0.8.2.orig/tools/oneEditor/tabcodeEditor.py	2013-11-14 10:13:25.558170408 +0400
++++ PythonCard-0.8.2/tools/oneEditor/tabcodeEditor.py	2013-11-14 10:13:43.305171511 +0400
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/python
  """
- __version__ = "$Revision: 1.10 $"
- __date__ = "$Date: 2004/10/17 16:39:13 $"
+ __version__ = "$Revision: 1.15 $"
+ __date__ = "$Date: 2005/12/29 02:48:25 $"

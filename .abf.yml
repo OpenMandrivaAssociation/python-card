@@ -1,2 +1,4 @@
+removed_sources:
+  PythonCard-0.8.1.tar.bz2: b1d1504afa5cb85ef76f7c26ce62c0f344130f4e
 sources:
-  "PythonCard-0.8.1.tar.bz2": b1d1504afa5cb85ef76f7c26ce62c0f344130f4e
+  PythonCard-0.8.2.tar.gz: cc7046e58a5de6dc726f2a54f6278f844d1cca5f
