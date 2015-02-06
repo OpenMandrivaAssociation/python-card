@@ -1,7 +1,7 @@
 Name: python-card
 Summary: PythonCard GUI construction toolkit
 Version: 0.8.2
-Release: 1
+Release: 2
 Source0: https://sourceforge.net/projects/pythoncard/files/PythonCard/0.8.2/PythonCard-%{version}.tar.gz
 Patch1: PythonCardSamples.patch
 Patch2: PythonCardConfig.patch
