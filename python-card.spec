@@ -5,7 +5,7 @@ Release: 2
 Source0: https://sourceforge.net/projects/pythoncard/files/PythonCard/0.8.2/PythonCard-%{version}.tar.gz
 Patch1: PythonCardSamples.patch
 Patch2: PythonCardConfig.patch
-URL: http://pythoncard.sourceforge.net/
+URL: https://pythoncard.sourceforge.net/
 Group: Development/Python
 License: Python license
 Requires: python-base >= %{py_ver}, wxPython >= 2.5.2
